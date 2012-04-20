@@ -1,11 +1,13 @@
 package MT::Plugin::OMV::Search::SearchStringNormalizer;
+# $Id$
 
 use strict;
 use MT::App::Search;
 
 use vars qw( $MYNAME $VERSION );
 $MYNAME = (split /::/, __PACKAGE__)[-1];
-$VERSION = '0.01_01';
+(my $revision = '$Rev$') =~ s/\D//g;
+$VERSION = "0.01_$revision";
 
 use base qw( MT::Plugin );
 my $plugin = __PACKAGE__->new ({
@@ -18,6 +20,7 @@ my $plugin = __PACKAGE__->new ({
     plugin_link => 'http://www.magicvox.net/archive/2012/04201308/', # blog
     doc_link => 'http://lab.magicvox.net/trac/mt-plugins/wiki/SearchStringNormalizer',# trac
     description => <<'HTMLHEREDOC',
+<__trans phrase="Convert the full-width alpha-numeric characters to the half-width ones in the search query.">
 HTMLHEREDOC
 });
 MT->add_plugin( $plugin );
