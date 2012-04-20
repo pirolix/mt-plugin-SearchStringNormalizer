@@ -5,7 +5,7 @@ use MT::App::Search;
 
 use vars qw( $MYNAME $VERSION );
 $MYNAME = (split /::/, __PACKAGE__)[-1];
-$VERSION = '0.01_00';
+$VERSION = '0.01_01';
 
 use base qw( MT::Plugin );
 my $plugin = __PACKAGE__->new ({
@@ -15,8 +15,8 @@ my $plugin = __PACKAGE__->new ({
     version => $VERSION,
     author_name => 'Open MagicVox.net',
     author_link => 'http://www.magicvox.net/',
-    plugin_link => 'http://www.magicvox.net/',#blog
-    doc_link => 'http://www.magicvox.net/',#trac
+    plugin_link => 'http://www.magicvox.net/archive/2012/04201308/', # blog
+    doc_link => 'http://lab.magicvox.net/trac/mt-plugins/wiki/SearchStringNormalizer',# trac
     description => <<'HTMLHEREDOC',
 HTMLHEREDOC
 });
